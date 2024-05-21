@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "dcef9f42-5ad6-42b2-bb73-29ed2f3ac75d",
+		"name": "CheckpointTrial5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34592708"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gabriel\",\r\n    \"email\": \"hay@itsme.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/students",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/exerciseSubmissions/1?mark=6",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"exerciseSubmissions",
+						"1"
+					],
+					"query": [
+						{
+							"key": "mark",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/exerciseSubmissions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"exerciseSubmissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exerciseId\":\"4\",\r\n    \"student\": {\r\n        \"id\": 1\r\n    },\r\n    \"marks\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/exerciseSubmissions",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"exerciseSubmissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "count by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/exerciseSubmissions/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"exerciseSubmissions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
